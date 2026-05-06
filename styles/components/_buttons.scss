@@ -1,0 +1,61 @@
+@use '../variables' as *;
+@use '../mixins' as *;
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: $space-xs;
+  padding: 14px 24px;
+  background: $ink;
+  color: $white;
+  font-family: $font-mono;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  border-radius: $radius-sm;
+  transition: background $dur-mid $ease-out;
+
+  svg {
+    transition: transform $dur-mid $ease-out;
+  }
+
+  &:hover svg {
+    transform: translateX(4px);
+  }
+}
+
+.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  gap: $space-xs;
+  padding: 14px 24px;
+  background: transparent;
+  color: $ink;
+  font-family: $font-mono;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  border: 1px solid $ink;
+  border-radius: $radius-sm;
+  transition: background $dur-mid $ease-out;
+}
+
+.feature-link {
+  display: inline-flex;
+  align-items: center;
+  gap: $space-xs;
+  font-family: $font-mono;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: $ink;
+  padding-bottom: 2px;
+  border-bottom: 1px solid $ink;
+  transition: all $dur-fast $ease-out;
+
+  &:hover {
+    color: var(--accent-game);
+    border-color: var(--accent-game);
+    gap: $space-sm;
+  }
+}

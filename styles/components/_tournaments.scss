@@ -1,0 +1,27 @@
+@use '../variables' as *;
+@use '../mixins' as *;
+
+.section-tournaments {
+  @include section-padding;
+  background: $ink;
+  color: $white;
+  position: relative;
+  overflow: hidden;
+
+  .section-label .label-text {
+    color: rgba(255, 255, 255, 0.5);
+  }
+
+  .section-title {
+    color: $white;
+  }
+}
+
+.tournaments-list {
+  @include container;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: $space-md;
+  position: relative;
+  z-index: 1;
+}

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tournaments>
+  <tournament id="1">
+    <name>Nexus Open Championship</name>
+    <status>live</status>
+    <prize>50000</prize>
+    <currency>BYN</currency>
+    <dateStart>2026-04-14</dateStart>
+    <dateEnd>2026-04-20</dateEnd>
+    <participants>128</participants>
+    <format>Single Elimination</format>
+    <rank>Platinum+</rank>
+    <server>EUW</server>
+    <region>EU</region>
+    <description>Крупнейший открытый турнир сезона 2026</description>
+  </tournament>
+  <tournament id="2">
+    <name>Diamond Cup Spring 2026</name>
+    <status>open</status>
+    <prize>25000</prize>
+    <currency>BYN</currency>
+    <dateStart>2026-04-22</dateStart>
+    <dateEnd>2026-05-05</dateEnd>
+    <participants>64</participants>
+    <format>Double Elimination</format>
+    <rank>Diamond+</rank>
+    <server>EUW</server>
+    <region>EU</region>
+    <description>Весенний кубок для Diamond+ игроков</description>
+  </tournament>
+  <tournament id="3">
+    <name>LCK Spring 2026</name>
+    <status>live</status>
+    <prize>300000</prize>
+    <currency>USD</currency>
+    <dateStart>2026-01-15</dateStart>
+    <dateEnd>2026-04-14</dateEnd>
+    <participants>10</participants>
+    <format>Round Robin + Playoffs</format>
+    <rank>Pro</rank>
+    <server>KR</server>
+    <region>KR</region>
+    <description>Официальная лига Кореи — весенний сплит</description>
+  </tournament>
+  <tournament id="4">
+    <name>LCS Spring 2026</name>
+    <status>live</status>
+    <prize>200000</prize>
+    <currency>USD</currency>
+    <dateStart>2026-01-24</dateStart>
+    <dateEnd>2026-04-10</dateEnd>
+    <participants>10</participants>
+    <format>Round Robin + Playoffs</format>
+    <rank>Pro</rank>
+    <server>NA</server>
+    <region>NA</region>
+    <description>Официальная лига Северной Америки — весенний сплит</description>
+  </tournament>
+  <tournament id="5">
+    <name>LEC Winter 2026</name>
+    <status>finished</status>
+    <prize>250000</prize>
+    <currency>USD</currency>
+    <dateStart>2026-01-20</dateStart>
+    <dateEnd>2026-03-28</dateEnd>
+    <participants>10</participants>
+    <format>Round Robin + Playoffs</format>
+    <rank>Pro</rank>
+    <server>EUW</server>
+    <region>EU</region>
+    <description>Официальная европейская лига — зимний сплит</description>
+  </tournament>
+  <tournament id="6">
+    <name>MSI 2026</name>
+    <status>soon</status>
+    <prize>2000000</prize>
+    <currency>USD</currency>
+    <dateStart>2026-05-02</dateStart>
+    <dateEnd>2026-05-19</dateEnd>
+    <participants>13</participants>
+    <format>Group Stage + Bracket</format>
+    <rank>Pro</rank>
+    <server>KR</server>
+    <region>Global</region>
+    <description>Международный турнир Mid-Season Invitational 2026</description>
+  </tournament>
+  <tournament id="7">
+    <name>Worlds 2026</name>
+    <status>soon</status>
+    <prize>2500000</prize>
+    <currency>USD</currency>
+    <dateStart>2026-09-28</dateStart>
+    <dateEnd>2026-11-03</dateEnd>
+    <participants>22</participants>
+    <format>Play-In + Groups + Bracket</format>
+    <rank>Pro</rank>
+    <server>CN</server>
+    <region>Global</region>
+    <description>Чемпионат мира по League of Legends 2026</description>
+  </tournament>
+  <tournament id="8">
+    <name>LPL Spring 2026</name>
+    <status>live</status>
+    <prize>400000</prize>
+    <currency>USD</currency>
+    <dateStart>2026-01-10</dateStart>
+    <dateEnd>2026-04-20</dateEnd>
+    <participants>17</participants>
+    <format>Round Robin + Playoffs</format>
+    <rank>Pro</rank>
+    <server>CN</server>
+    <region>CN</region>
+    <description>Официальная китайская лига — весенний сплит</description>
+  </tournament>
+</tournaments>

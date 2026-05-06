@@ -1,0 +1,319 @@
+@use '../variables' as *;
+@use '../mixins' as *;
+
+body.dark {
+  .lb-hero {
+    padding: 7rem 0 4rem;
+
+    @include container;
+
+    .lb-label {
+      @include mono(11px, 0.15em);
+      color: $frost;
+      text-transform: uppercase;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 1.5rem;
+
+      &::before {
+        content: '';
+        display: block;
+        width: 32px;
+        height: 1px;
+        background: $frost;
+      }
+    }
+
+    h1 {
+      @include display(clamp(52px, 8vw, 96px));
+      color: $platinum;
+      margin-bottom: 1.2rem;
+
+      .outline-frost {
+        -webkit-text-stroke: 1.5px $frost;
+        color: transparent;
+      }
+    }
+
+    .lb-sub {
+      font-family: $font-body;
+      font-size: 16px;
+      color: $muted-dark;
+      max-width: 480px;
+    }
+  }
+
+  .lb-filters {
+    @include container;
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+
+    .filter-tab {
+      @include mono(11px, 0.1em);
+      text-transform: uppercase;
+      padding: 8px 18px;
+      border-radius: 4px;
+      border: 1px solid $line-dark;
+      color: $muted-dark;
+      background: rgba($dark-teal, 0.2);
+      cursor: pointer;
+      transition: all 0.2s;
+
+      &:hover {
+        color: $platinum;
+        border-color: rgba($frost, 0.3);
+      }
+
+      &.active {
+        background: $stormy-teal;
+        color: $platinum;
+        border-color: $stormy-teal;
+      }
+    }
+  }
+
+  .lb-podium {
+    @include container;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 4rem;
+    align-items: end;
+
+    @include respond-to(md) {
+      grid-template-columns: 1fr;
+    }
+
+    .podium-card {
+      @include liquid-glass($dark-teal, 0.4, 16px);
+      border-radius: 12px;
+      padding: 2rem 1.5rem;
+      text-align: center;
+      position: relative;
+      cursor: pointer;
+      transition: transform 0.2s;
+
+      &:hover { transform: translateY(-4px); }
+
+      &.rank-1 {
+        border-color: rgba($frost, 0.4);
+        box-shadow: 0 0 32px rgba($frost, 0.12);
+        padding: 2.5rem 1.5rem;
+
+        .podium-rank-num {
+          color: $frost;
+          font-size: 48px;
+        }
+      }
+
+      &.rank-2, &.rank-3 {
+        .podium-rank-num {
+          color: $muted-dark;
+          font-size: 36px;
+        }
+      }
+
+      .podium-rank-num {
+        font-family: $font-display;
+        letter-spacing: 0.04em;
+        line-height: 1;
+        margin-bottom: 1rem;
+      }
+
+      .podium-avatar {
+        width: 64px;
+        height: 64px;
+        border-radius: 50%;
+        background: rgba($stormy-teal, 0.6);
+        border: 2px solid rgba($frost, 0.2);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 1rem;
+        font-family: $font-display;
+        font-size: 22px;
+        color: $frost;
+        letter-spacing: 0.04em;
+      }
+
+      .podium-name {
+        font-family: $font-display;
+        font-size: 22px;
+        color: $platinum;
+        letter-spacing: 0.04em;
+        margin-bottom: 0.4rem;
+      }
+
+      .podium-role {
+        @include mono(10px, 0.1em);
+        color: $muted-dark;
+        text-transform: uppercase;
+        margin-bottom: 0.8rem;
+      }
+
+      .podium-rank-badge {
+        display: inline-block;
+        @include mono(10px, 0.08em);
+        text-transform: uppercase;
+        padding: 4px 10px;
+        border-radius: 3px;
+        background: rgba($frost, 0.1);
+        color: $frost;
+        border: 1px solid rgba($frost, 0.2);
+        margin-bottom: 1rem;
+      }
+
+      .podium-lp {
+        font-family: $font-display;
+        font-size: 28px;
+        color: $platinum;
+        letter-spacing: 0.04em;
+
+        span {
+          @include mono(10px, 0.1em);
+          color: $muted-dark;
+          display: block;
+          text-transform: uppercase;
+          margin-top: 2px;
+        }
+      }
+    }
+  }
+
+  .lb-table-section {
+    @include container;
+    margin-bottom: 6rem;
+
+    .lb-table-head {
+      display: grid;
+      grid-template-columns: 48px 1fr 100px 80px 80px 80px 80px;
+      gap: 1rem;
+      padding: 0.75rem 1.5rem;
+      border-bottom: 1px solid $line-dark;
+      margin-bottom: 0.5rem;
+
+      span {
+        @include mono(10px, 0.12em);
+        color: $muted-dark;
+        text-transform: uppercase;
+      }
+
+      @include respond-to(md) {
+        grid-template-columns: 40px 1fr 90px 70px;
+
+        .col-server, .col-games, .col-wr { display: none; }
+      }
+    }
+
+    .lb-row {
+      display: grid;
+      grid-template-columns: 48px 1fr 100px 80px 80px 80px 80px;
+      gap: 1rem;
+      padding: 1rem 1.5rem;
+      border-bottom: 1px solid rgba($frost, 0.05);
+      align-items: center;
+      text-decoration: none;
+      color: $platinum;
+      transition: background 0.15s;
+      cursor: pointer;
+      border-radius: 6px;
+
+      &:hover {
+        background: rgba($stormy-teal, 0.2);
+      }
+
+      &.top-3 {
+        background: rgba($dark-teal, 0.4);
+        border-color: rgba($frost, 0.1);
+      }
+
+      .row-rank {
+        @include mono(13px, 0.05em);
+        color: $muted-dark;
+        text-align: center;
+      }
+
+      .row-player {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+
+        .row-avatar {
+          width: 36px;
+          height: 36px;
+          border-radius: 50%;
+          background: rgba($stormy-teal, 0.5);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-family: $font-display;
+          font-size: 14px;
+          color: $frost;
+          flex-shrink: 0;
+          border: 1px solid rgba($frost, 0.15);
+        }
+
+        .row-name {
+          font-family: $font-display;
+          font-size: 16px;
+          letter-spacing: 0.04em;
+          color: $platinum;
+        }
+
+        .row-role {
+          @include mono(9px, 0.08em);
+          color: $muted-dark;
+          text-transform: uppercase;
+        }
+      }
+
+      .row-tier {
+        @include mono(10px, 0.08em);
+        text-transform: uppercase;
+        padding: 3px 8px;
+        border-radius: 3px;
+        display: inline-block;
+        background: rgba($frost, 0.08);
+        color: $frost;
+        border: 1px solid rgba($frost, 0.15);
+
+        &.challenger { background: rgba(#90DDF0, 0.15); color: $frost; }
+        &.grandmaster { background: rgba(#FF6B6B, 0.15); color: #FF8E8E; border-color: rgba(#FF6B6B, 0.3); }
+        &.master { background: rgba(#C084FC, 0.15); color: #C084FC; border-color: rgba(#C084FC, 0.3); }
+      }
+
+      .row-lp {
+        font-family: $font-display;
+        font-size: 16px;
+        color: $platinum;
+        letter-spacing: 0.04em;
+      }
+
+      .row-wr {
+        font-family: $font-mono;
+        font-size: 13px;
+        color: $platinum;
+      }
+
+      .row-games {
+        @include mono(12px, 0.02em);
+        color: $muted-dark;
+      }
+
+      .row-server {
+        @include mono(10px, 0.1em);
+        color: $muted-dark;
+        text-transform: uppercase;
+      }
+
+      @include respond-to(md) {
+        grid-template-columns: 40px 1fr 90px 70px;
+
+        .row-server, .row-games, .row-wr { display: none; }
+      }
+    }
+  }
+}

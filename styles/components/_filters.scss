@@ -1,0 +1,93 @@
+@use '../variables' as *;
+@use '../mixins' as *;
+
+.page-hero {
+  @include container;
+  padding-top: $space-3xl;
+  padding-bottom: $space-lg;
+  display: flex;
+  flex-direction: column;
+  gap: $space-md;
+
+  .page-label {
+    font-family: $font-mono;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: $muted;
+
+    .label-num {
+      color: var(--accent-game);
+      font-weight: 700;
+    }
+  }
+
+  .page-title {
+    font-family: $font-display;
+    font-size: clamp(56px, 8vw, 96px);
+    line-height: 0.92;
+  }
+
+  .page-sub {
+    max-width: 520px;
+    color: $muted;
+    font-size: 15px;
+  }
+}
+
+.filters-bar {
+  @include container;
+  display: flex;
+  gap: $space-md;
+  flex-wrap: wrap;
+  align-items: center;
+  padding-bottom: $space-xl;
+
+  .filter-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+
+    label {
+      font-family: $font-mono;
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: $muted;
+    }
+  }
+
+  select {
+    font-family: $font-mono;
+    font-size: 12px;
+    padding: 10px 32px 10px 14px;
+    background: $white;
+    border: 1px solid $line;
+    border-radius: $radius-sm;
+    color: $ink;
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 10 10'><path d='M2 4 L5 7 L8 4' stroke='%230C0C0C' stroke-width='1.5' fill='none'/></svg>");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    min-width: 160px;
+    transition: border $dur-fast $ease-out;
+
+    &:hover,
+    &:focus {
+      border-color: var(--accent-game);
+      outline: none;
+    }
+  }
+}
+
+.empty-state {
+  @include container;
+  padding: $space-3xl 0;
+  text-align: center;
+  color: $muted;
+  font-family: $font-mono;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}

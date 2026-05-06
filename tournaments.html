@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEXUS — Турниры League of Legends</title>
+    <meta name="description" content="Каталог турниров League of Legends. Создавай и участвуй в сообществе.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600;700&family=Space+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body data-page="tournaments" class="dark">
+    <div class="grid-overlay" aria-hidden="true"></div>
+
+    <nav aria-label="Главная навигация">
+        <a href="index.html" class="logo">
+            <span class="logo-gem" aria-hidden="true"></span>
+            NEXUS
+        </a>
+        <ul class="nav-center">
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="tournaments.html" class="active">Турниры</a></li>
+            <li><a href="leaderboard.html">Рейтинг</a></li>
+            <li><a href="player.html">Игроки</a></li>
+        </ul>
+        <div class="nav-right">
+            <span class="nav-tag">Season 2026</span>
+        </div>
+    </nav>
+
+    <main>
+        <section class="page-intro">
+            <header class="page-hero">
+                <div class="page-label">
+                    <span class="label-num">02</span> / Каталог
+                </div>
+                <h1 class="page-title">
+                    <span class="outline">Все</span><br>
+                    турниры
+                </h1>
+                <p class="page-sub">
+                    Открытые турниры League of Legends, созданные игроками сообщества.
+                    Регистрируйся или создай свой турнир с призовым фондом.
+                </p>
+                <div class="page-hero-actions">
+                    <button class="btn-create" id="openCreateModal" aria-haspopup="dialog">
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+                            <path d="M7 1v12M1 7h12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                        Создать турнир
+                    </button>
+                    <a href="leaderboard.html" class="btn-ghost-dark">Рейтинг игроков</a>
+                </div>
+            </header>
+
+            <div class="filters-bar" role="search" aria-label="Фильтры турниров">
+                <div class="filter-group">
+                    <label for="fRegion">Регион</label>
+                    <select id="fRegion" data-filter="region">
+                        <option value="all">Все регионы</option>
+                        <option value="EU">EU</option>
+                        <option value="NA">NA</option>
+                        <option value="KR">KR</option>
+                        <option value="CN">CN</option>
+                        <option value="Global">Global</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="fStatus">Статус</label>
+                    <select id="fStatus" data-filter="tstatus">
+                        <option value="all">Все статусы</option>
+                        <option value="live">Live</option>
+                        <option value="open">Открыта запись</option>
+                        <option value="soon">Скоро</option>
+                        <option value="finished">Завершён</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="fFormat">Формат</label>
+                    <select id="fFormat" data-filter="format">
+                        <option value="all">Все форматы</option>
+                        <option value="Single Elimination">Single Elimination</option>
+                        <option value="Double Elimination">Double Elimination</option>
+                        <option value="Round Robin + Playoffs">Round Robin + Playoffs</option>
+                    </select>
+                </div>
+            </div>
+        </section>
+
+        <section class="tournaments-list-section">
+            <div class="tournaments-list-header">
+                <span class="list-count" id="listCount">Загрузка…</span>
+            </div>
+            <div id="tournamentsGrid" role="list" aria-label="Список турниров">
+                
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-inner container">
+            <div class="footer-left">© 2026 NEXUS. Курсовой проект БГТУ.</div>
+            <div class="footer-logo logo">
+                <span class="logo-gem" aria-hidden="true"></span>
+                NEXUS
+            </div>
+            <div class="footer-right">
+                <a href="index.html">Главная</a>
+                <a href="leaderboard.html">Рейтинг</a>
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal-overlay" id="createModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <div class="modal">
+            <div class="modal-header">
+                <h2 id="modalTitle">Новый<br>турнир</h2>
+                <button class="modal-close" id="closeModal" aria-label="Закрыть">&#x2715;</button>
+            </div>
+            <div id="modalBody">
+                <form class="form-grid" id="createTournamentForm" novalidate>
+                    <div class="form-group">
+                        <label for="fName">Название турнира *</label>
+                        <input type="text" id="fName" name="name" placeholder="Nexus Community Cup" required maxlength="80">
+                    </div>
+                    <div class="form-row-2">
+                        <div class="form-group">
+                            <label for="fPrize">Призовой фонд (Br)</label>
+                            <input type="number" id="fPrize" name="prize" placeholder="10000" min="0">
+                        </div>
+                        <div class="form-group">
+                            <label for="fParticipants">Участников</label>
+                            <select id="fParticipants" name="participants">
+                                <option value="8">8</option>
+                                <option value="16" selected>16</option>
+                                <option value="32">32</option>
+                                <option value="64">64</option>
+                                <option value="128">128</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row-2">
+                        <div class="form-group">
+                            <label for="fModalFormat">Формат</label>
+                            <select id="fModalFormat" name="format">
+                                <option value="Single Elimination">Single Elimination</option>
+                                <option value="Double Elimination">Double Elimination</option>
+                                <option value="Round Robin + Playoffs">Round Robin + Playoffs</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="fRank">Минимальный ранг</label>
+                            <select id="fRank" name="rank">
+                                <option value="All">Все ранги</option>
+                                <option value="Silver+">Silver+</option>
+                                <option value="Gold+">Gold+</option>
+                                <option value="Platinum+">Platinum+</option>
+                                <option value="Diamond+">Diamond+</option>
+                                <option value="Emerald+">Emerald+</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row-2">
+                        <div class="form-group">
+                            <label for="fDateStart">Дата начала *</label>
+                            <input type="date" id="fDateStart" name="dateStart" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="fDateEnd">Дата окончания *</label>
+                            <input type="date" id="fDateEnd" name="dateEnd" required>
+                        </div>
+                    </div>
+                    <div class="form-row-2">
+                        <div class="form-group">
+                            <label for="fModalRegion">Регион</label>
+                            <select id="fModalRegion" name="region">
+                                <option value="EU">EU</option>
+                                <option value="NA">NA</option>
+                                <option value="KR">KR</option>
+                                <option value="CN">CN</option>
+                                <option value="Global">Global</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="fServer">Сервер</label>
+                            <select id="fServer" name="server">
+                                <option value="EUW">EUW</option>
+                                <option value="EUNE">EUNE</option>
+                                <option value="NA">NA</option>
+                                <option value="KR">KR</option>
+                                <option value="CN">CN</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="fDescription">Описание</label>
+                        <textarea id="fDescription" name="description" placeholder="Расскажи об условиях и правилах турнира…"></textarea>
+                    </div>
+                    <div class="form-actions">
+                        <button type="submit" class="btn-form-submit">Создать турнир</button>
+                        <button type="button" class="btn-form-cancel" id="cancelModal">Отмена</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+@use 'variables' as *;
+
+@mixin outline-text($stroke: 1.5px, $color: $ink) {
+  -webkit-text-stroke: $stroke $color;
+  color: transparent;
+}
+
+@mixin container {
+  width: 100%;
+  max-width: $max-width;
+  margin: 0 auto;
+  padding: 0 $space-lg;
+
+  @media (max-width: 640px) {
+    padding: 0 $space-sm;
+  }
+}
+
+@mixin section-padding {
+  padding: $space-4xl 0;
+
+  @media (max-width: 900px) {
+    padding: $space-2xl 0;
+  }
+}
+
+@mixin fade-in-hidden {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity $dur-slow $ease-out, transform $dur-slow $ease-out;
+}
+
+@mixin fade-in-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+@mixin liquid-glass($tint: $dark-teal, $opacity: 0.35, $blur: 20px) {
+  background: rgba($tint, $opacity);
+  backdrop-filter: blur($blur) saturate(180%);
+  -webkit-backdrop-filter: blur($blur) saturate(180%);
+  border: 1px solid rgba($frost, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba($frost, 0.06);
+}
+
+@mixin respond-to($bp) {
+  @if $bp == lg { @media (max-width: $bp-lg) { @content; } }
+  @else if $bp == md { @media (max-width: $bp-md) { @content; } }
+  @else if $bp == sm { @media (max-width: $bp-sm) { @content; } }
+}
+
+@mixin mono($size: 10px, $spacing: 0.1em) {
+  font-family: $font-mono;
+  font-size: $size;
+  letter-spacing: $spacing;
+}
+
+@mixin display($size) {
+  font-family: $font-display;
+  font-size: $size;
+  letter-spacing: 0.04em;
+  line-height: 0.92;
+}

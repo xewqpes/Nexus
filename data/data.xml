@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data>
+    <tournaments>
+        <tournament id="t001" game="lol">
+            <name>Worlds 2026</name>
+            <date>28 сентября — 3 ноября 2026</date>
+            <prize>$2,500,000</prize>
+            <region>Global</region>
+            <status>upcoming</status>
+        </tournament>
+        <tournament id="t002" game="lol">
+            <name>MSI 2026</name>
+            <date>2–19 мая 2026</date>
+            <prize>$2,000,000</prize>
+            <region>Global</region>
+            <status>upcoming</status>
+        </tournament>
+        <tournament id="t003" game="lol">
+            <name>LCK Spring 2026</name>
+            <date>15 января — 14 апреля 2026</date>
+            <prize>$300,000</prize>
+            <region>KR</region>
+            <status>live</status>
+        </tournament>
+        <tournament id="t004" game="lol">
+            <name>LPL Spring 2026</name>
+            <date>10 января — 20 апреля 2026</date>
+            <prize>$400,000</prize>
+            <region>CN</region>
+            <status>live</status>
+        </tournament>
+        <tournament id="t005" game="lol">
+            <name>LCS Spring 2026</name>
+            <date>24 января — 10 апреля 2026</date>
+            <prize>$200,000</prize>
+            <region>NA</region>
+            <status>live</status>
+        </tournament>
+        <tournament id="t006" game="lol">
+            <name>LEC Spring 2026</name>
+            <date>20 января — 28 марта 2026</date>
+            <prize>$250,000</prize>
+            <region>EU</region>
+            <status>live</status>
+        </tournament>
+    </tournaments>
+
+    <teams>
+        <team id="team001" game="lol">
+            <name>T1</name>
+            <region>KR</region>
+            <winrate>85</winrate>
+            <logo>T1</logo>
+            <players>
+                <player role="Top">Zeus</player>
+                <player role="Jungle">Oner</player>
+                <player role="Mid">Faker</player>
+                <player role="ADC">Gumayusi</player>
+                <player role="Support">Keria</player>
+            </players>
+        </team>
+        <team id="team002" game="lol">
+            <name>Gen.G</name>
+            <region>KR</region>
+            <winrate>79</winrate>
+            <logo>GEN</logo>
+            <players>
+                <player role="Top">Kiin</player>
+                <player role="Jungle">Canyon</player>
+                <player role="Mid">Chovy</player>
+                <player role="ADC">Peyz</player>
+                <player role="Support">Lehends</player>
+            </players>
+        </team>
+        <team id="team003" game="lol">
+            <name>G2 Esports</name>
+            <region>EU</region>
+            <winrate>72</winrate>
+            <logo>G2</logo>
+            <players>
+                <player role="Top">BrokenBlade</player>
+                <player role="Jungle">Yike</player>
+                <player role="Mid">Caps</player>
+                <player role="ADC">Hans Sama</player>
+                <player role="Support">Mikyx</player>
+            </players>
+        </team>
+        <team id="team004" game="lol">
+            <name>JD Gaming</name>
+            <region>CN</region>
+            <winrate>74</winrate>
+            <logo>JDG</logo>
+            <players>
+                <player role="Top">369</player>
+                <player role="Jungle">Kanavi</player>
+                <player role="Mid">Knight</player>
+                <player role="ADC">Ruler</player>
+                <player role="Support">Missing</player>
+            </players>
+        </team>
+        <team id="team005" game="lol">
+            <name>Cloud9</name>
+            <region>NA</region>
+            <winrate>66</winrate>
+            <logo>C9</logo>
+            <players>
+                <player role="Top">Fudge</player>
+                <player role="Jungle">Blaber</player>
+                <player role="Mid">Jojopyun</player>
+                <player role="ADC">Berserker</player>
+                <player role="Support">Vulcan</player>
+            </players>
+        </team>
+        <team id="team006" game="lol">
+            <name>Fnatic</name>
+            <region>EU</region>
+            <winrate>63</winrate>
+            <logo>FNC</logo>
+            <players>
+                <player role="Top">Wunder</player>
+                <player role="Jungle">Razork</player>
+                <player role="Mid">Humanoid</player>
+                <player role="ADC">Noah</player>
+                <player role="Support">Trymbi</player>
+            </players>
+        </team>
+        <team id="team007" game="lol">
+            <name>KT Rolster</name>
+            <region>KR</region>
+            <winrate>68</winrate>
+            <logo>KT</logo>
+            <players>
+                <player role="Top">Doran</player>
+                <player role="Jungle">Cuzz</player>
+                <player role="Mid">Bdd</player>
+                <player role="ADC">Aiming</player>
+                <player role="Support">BeryL</player>
+            </players>
+        </team>
+        <team id="team008" game="lol">
+            <name>Hanwha Life</name>
+            <region>KR</region>
+            <winrate>71</winrate>
+            <logo>HLE</logo>
+            <players>
+                <player role="Top">Kingen</player>
+                <player role="Jungle">Peanut</player>
+                <player role="Mid">Zeka</player>
+                <player role="ADC">Viper</player>
+                <player role="Support">Delight</player>
+            </players>
+        </team>
+    </teams>
+</data>

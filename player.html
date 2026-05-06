@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEXUS — Профиль игрока</title>
+    <meta name="description" content="Профиль игрока League of Legends — статистика, чемпионы, матчи, пентагональная диаграмма.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600;700&family=Space+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body data-page="player" class="dark">
+    <div class="grid-overlay" aria-hidden="true"></div>
+
+    <nav aria-label="Главная навигация">
+        <a href="index.html" class="logo">
+            <span class="logo-gem" aria-hidden="true"></span>
+            NEXUS
+        </a>
+        <ul class="nav-center">
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="tournaments.html">Турниры</a></li>
+            <li><a href="leaderboard.html">Рейтинг</a></li>
+            <li><a href="player.html" class="active">Игроки</a></li>
+        </ul>
+        <div class="nav-right">
+            <span class="nav-tag">Season 2026</span>
+        </div>
+    </nav>
+
+    <div class="player-select-bar">
+        <a href="leaderboard.html">← Рейтинг</a>
+        <span class="sep">/</span>
+        <label for="playerSelect" class="select-label">Выбрать игрока:</label>
+        <select id="playerSelect" aria-label="Выбор игрока">
+            <option value="">Загрузка...</option>
+        </select>
+    </div>
+
+    <main>
+        <section class="player-section" id="playerSection" aria-label="Профиль игрока">
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-inner">
+                <span class="logo">
+                    <span class="logo-gem" aria-hidden="true"></span>
+                    NEXUS
+                </span>
+                <p class="footer-note">© 2026 NEXUS Esports Platform. Курсовой проект.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+</body>
+</html>

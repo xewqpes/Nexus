@@ -1,0 +1,349 @@
+@use '../variables' as *;
+@use '../mixins' as *;
+
+body.dark {
+  .player-section {
+    @include container;
+    padding-top: 7rem;
+    padding-bottom: 6rem;
+  }
+
+  .player-header {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 2.5rem;
+    align-items: center;
+    margin-bottom: 4rem;
+    padding-bottom: 3rem;
+    border-bottom: 1px solid $line-dark;
+
+    @include respond-to(md) {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    .player-avatar {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background: rgba($stormy-teal, 0.6);
+      border: 2px solid rgba($frost, 0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: $font-display;
+      font-size: 36px;
+      color: $frost;
+      letter-spacing: 0.04em;
+      flex-shrink: 0;
+    }
+
+    .player-meta {
+      .player-name {
+        @include display(clamp(40px, 6vw, 72px));
+        color: $platinum;
+        margin-bottom: 0.5rem;
+      }
+
+      .player-badges {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        flex-wrap: wrap;
+
+        .badge {
+          @include mono(10px, 0.1em);
+          text-transform: uppercase;
+          padding: 4px 12px;
+          border-radius: 4px;
+          border: 1px solid;
+
+          &.badge-rank {
+            background: rgba($frost, 0.1);
+            color: $frost;
+            border-color: rgba($frost, 0.25);
+          }
+
+          &.badge-role {
+            background: rgba($stormy-teal, 0.3);
+            color: $platinum;
+            border-color: rgba($stormy-teal, 0.5);
+          }
+
+          &.badge-server {
+            background: rgba($platinum, 0.06);
+            color: $muted-dark;
+            border-color: $line-dark;
+          }
+        }
+      }
+    }
+
+    .player-lp-block {
+      text-align: right;
+
+      @include respond-to(md) {
+        text-align: left;
+      }
+
+      .lp-num {
+        font-family: $font-display;
+        font-size: clamp(36px, 5vw, 56px);
+        color: $frost;
+        letter-spacing: 0.04em;
+        line-height: 1;
+      }
+
+      .lp-label {
+        @include mono(10px, 0.12em);
+        color: $muted-dark;
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  .player-main-grid {
+    display: grid;
+    grid-template-columns: 1fr 320px;
+    gap: 2.5rem;
+    margin-bottom: 4rem;
+
+    @include respond-to(lg) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .player-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    margin-bottom: 2rem;
+
+    @include respond-to(md) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .stat-card {
+      @include liquid-glass($dark-teal, 0.4, 14px);
+      border-radius: 10px;
+      padding: 1.5rem;
+      text-align: center;
+
+      .stat-num {
+        font-family: $font-display;
+        font-size: 36px;
+        color: $platinum;
+        letter-spacing: 0.04em;
+        line-height: 1;
+        margin-bottom: 0.5rem;
+      }
+
+      .stat-label {
+        @include mono(10px, 0.12em);
+        color: $muted-dark;
+        text-transform: uppercase;
+      }
+
+      &.stat-highlight .stat-num {
+        color: $frost;
+      }
+    }
+  }
+
+  .champions-section {
+    @include liquid-glass($dark-teal, 0.3, 12px);
+    border-radius: 12px;
+    padding: 1.5rem;
+
+    h3 {
+      @include mono(11px, 0.12em);
+      color: $muted-dark;
+      text-transform: uppercase;
+      margin-bottom: 1.2rem;
+    }
+
+    .champion-row {
+      display: grid;
+      grid-template-columns: 1fr 60px 60px;
+      gap: 1rem;
+      padding: 0.75rem 0;
+      border-bottom: 1px solid rgba($frost, 0.06);
+      align-items: center;
+
+      &:last-child { border-bottom: none; }
+
+      .champ-name {
+        font-family: $font-body;
+        font-size: 14px;
+        color: $platinum;
+        font-weight: 500;
+      }
+
+      .champ-games {
+        @include mono(11px, 0.04em);
+        color: $muted-dark;
+        text-align: center;
+      }
+
+      .champ-wr {
+        font-family: $font-mono;
+        font-size: 12px;
+        text-align: right;
+        color: $frost;
+      }
+    }
+  }
+
+  .radar-card {
+    @include liquid-glass($dark-teal, 0.35, 16px);
+    border-radius: 12px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h3 {
+      @include mono(11px, 0.12em);
+      color: $muted-dark;
+      text-transform: uppercase;
+      margin-bottom: 1.5rem;
+      align-self: flex-start;
+    }
+
+    .radar-svg {
+      width: 100%;
+      max-width: 280px;
+    }
+
+    .radar-labels-list {
+      margin-top: 1.5rem;
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.5rem;
+
+      .radar-label-item {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+
+        .dot {
+          width: 6px;
+          height: 6px;
+          border-radius: 50%;
+          background: $frost;
+          flex-shrink: 0;
+        }
+
+        span {
+          @include mono(10px, 0.08em);
+          color: $muted-dark;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+
+  .match-history {
+    h2 {
+      font-family: $font-display;
+      font-size: 28px;
+      color: $platinum;
+      letter-spacing: 0.04em;
+      margin-bottom: 1.5rem;
+    }
+
+    .history-table {
+      width: 100%;
+      border-collapse: collapse;
+
+      thead {
+        tr {
+          border-bottom: 1px solid $line-dark;
+        }
+
+        th {
+          @include mono(10px, 0.12em);
+          color: $muted-dark;
+          text-transform: uppercase;
+          text-align: left;
+          padding: 0.75rem 1rem;
+          font-weight: 400;
+        }
+      }
+
+      tbody {
+        tr {
+          border-bottom: 1px solid rgba($frost, 0.05);
+          transition: background 0.15s;
+
+          &:hover {
+            background: rgba($stormy-teal, 0.15);
+          }
+
+          &.win-row .result-badge { background: rgba(#4CAF50, 0.15); color: #7ECF80; border-color: rgba(#4CAF50, 0.3); }
+          &.loss-row .result-badge { background: rgba(#EF5350, 0.15); color: #EF8080; border-color: rgba(#EF5350, 0.3); }
+        }
+
+        td {
+          padding: 0.9rem 1rem;
+          font-size: 14px;
+          color: $platinum;
+
+          &.td-champion { font-weight: 500; }
+          &.td-kda { font-family: $font-mono; font-size: 12px; }
+          &.td-cs { @include mono(12px, 0.02em); color: $muted-dark; }
+          &.td-duration { @include mono(11px, 0.04em); color: $muted-dark; }
+        }
+
+        .result-badge {
+          @include mono(10px, 0.08em);
+          text-transform: uppercase;
+          padding: 3px 8px;
+          border-radius: 3px;
+          border: 1px solid;
+        }
+      }
+    }
+  }
+
+  .player-select-bar {
+    @include container;
+    padding-top: 1.5rem;
+    padding-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    a {
+      @include mono(11px, 0.1em);
+      text-transform: uppercase;
+      color: $muted-dark;
+      text-decoration: none;
+      transition: color 0.2s;
+
+      &:hover { color: $frost; }
+    }
+
+    .sep { color: $line-dark; }
+
+    .select-label {
+      @include mono(11px, 0.1em);
+      text-transform: uppercase;
+      color: $muted-dark;
+    }
+
+    select {
+      background: rgba($dark-teal, 0.6);
+      border: 1px solid $line-dark;
+      color: $platinum;
+      padding: 6px 12px;
+      border-radius: 4px;
+      font-family: $font-mono;
+      font-size: 12px;
+      cursor: pointer;
+
+      option { background: $onyx; }
+    }
+  }
+}

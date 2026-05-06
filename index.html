@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEXUS — Турниры LoL для игроков</title>
+    <meta name="description" content="Платформа сообщества League of Legends. Создавай и участвуй в турнирах с призовыми фондами.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600;700&family=Space+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body data-page="home" class="dark">
+    <div class="grid-overlay" aria-hidden="true"></div>
+
+    <nav aria-label="Главная навигация">
+        <a href="index.html" class="logo">
+            <span class="logo-gem" aria-hidden="true"></span>
+            NEXUS
+        </a>
+        <ul class="nav-center">
+            <li><a href="index.html" class="active">Главная</a></li>
+            <li><a href="tournaments.html">Турниры</a></li>
+            <li><a href="leaderboard.html">Рейтинг</a></li>
+            <li><a href="player.html">Игроки</a></li>
+        </ul>
+        <div class="nav-right">
+            <span class="nav-tag">Season 2026</span>
+        </div>
+    </nav>
+
+    <main>
+        <section class="hero" id="top">
+            <div class="hero-main">
+                <div class="hero-left reveal">
+                    <div class="season-tag">
+                        <span class="season-bar" aria-hidden="true"></span>
+                        <span class="season-text">Season 2026 — Open</span>
+                    </div>
+
+                    <h1 class="hero-headline">
+                        <span class="outline">NEXUS</span>
+                        <span>TOURNAMENT</span>
+                        <span class="gold">HUB</span>
+                    </h1>
+
+                    <p class="hero-body">
+                        Платформа сообщества League of Legends.
+                        Создавай турниры с призовыми фондами, собирай команду
+                        и соревнуйся с игроками по всему миру.
+                    </p>
+
+                    <div class="hero-cta">
+                        <a href="tournaments.html" class="btn-primary">
+                            <span>Смотреть турниры</span>
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                                <path d="M6 3L11 8L6 13" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                        <a href="#features" class="btn-ghost">О проекте</a>
+                    </div>
+
+                    <div class="hero-metrics">
+                        <div class="metric">
+                            <div class="metric-num">8K<sup>+</sup></div>
+                            <div class="metric-label">Игроков</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-num">50<sup>+</sup></div>
+                            <div class="metric-label">Турниров</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-num">200K<sup>Br</sup></div>
+                            <div class="metric-label">В фондах</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-right" aria-hidden="true">
+                    <div class="bracket-wrap">
+                        <svg class="bracket-svg" viewBox="0 0 420 420" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <filter id="glow-soft">
+                                    <feGaussianBlur stdDeviation="2.5" result="blur"/>
+                                    <feMerge>
+                                        <feMergeNode in="blur"/>
+                                        <feMergeNode in="SourceGraphic"/>
+                                    </feMerge>
+                                </filter>
+                                <filter id="glow-strong">
+                                    <feGaussianBlur stdDeviation="6" result="blur"/>
+                                    <feMerge>
+                                        <feMergeNode in="blur"/>
+                                        <feMergeNode in="SourceGraphic"/>
+                                    </feMerge>
+                                </filter>
+                            </defs>
+
+                            <circle cx="210" cy="210" r="168" stroke="rgba(144,221,240,0.06)" stroke-width="1"/>
+                            <circle cx="210" cy="210" r="108" stroke="rgba(144,221,240,0.08)" stroke-width="1" stroke-dasharray="4 6"/>
+                            <circle cx="210" cy="210" r="58"  stroke="rgba(144,221,240,0.14)" stroke-width="1"/>
+
+                            <line x1="378" y1="210" x2="310" y2="169" stroke="rgba(44,102,110,0.55)" stroke-width="1"/>
+                            <line x1="329" y1="91"  x2="310" y2="169" stroke="rgba(44,102,110,0.55)" stroke-width="1"/>
+                            <line x1="210" y1="42"  x2="169" y2="110" stroke="rgba(44,102,110,0.55)" stroke-width="1"/>
+                            <line x1="91"  y1="91"  x2="169" y2="110" stroke="rgba(44,102,110,0.55)" stroke-width="1"/>
+                            <line x1="42"  y1="210" x2="110" y2="251" stroke="rgba(44,102,110,0.55)" stroke-width="1"/>
+                            <line x1="91"  y1="329" x2="110" y2="251" stroke="rgba(44,102,110,0.55)" stroke-width="1"/>
+                            <line x1="210" y1="378" x2="251" y2="310" stroke="rgba(44,102,110,0.55)" stroke-width="1"/>
+                            <line x1="329" y1="329" x2="251" y2="310" stroke="rgba(44,102,110,0.55)" stroke-width="1"/>
+
+                            <line x1="310" y1="169" x2="232" y2="156" stroke="rgba(144,221,240,0.28)" stroke-width="1.5"/>
+                            <line x1="169" y1="110" x2="232" y2="156" stroke="rgba(144,221,240,0.28)" stroke-width="1.5"/>
+                            <line x1="110" y1="251" x2="188" y2="264" stroke="rgba(144,221,240,0.28)" stroke-width="1.5"/>
+                            <line x1="251" y1="310" x2="188" y2="264" stroke="rgba(144,221,240,0.28)" stroke-width="1.5"/>
+
+                            <line x1="232" y1="156" x2="210" y2="210" stroke="#90DDF0" stroke-width="2" filter="url(#glow-soft)"/>
+                            <line x1="188" y1="264" x2="210" y2="210" stroke="#90DDF0" stroke-width="2" filter="url(#glow-soft)"/>
+
+                            <circle cx="378" cy="210" r="18" fill="rgba(7,57,60,0.85)" stroke="rgba(144,221,240,0.35)" stroke-width="1.5"/>
+                            <text x="378" y="210" text-anchor="middle" dominant-baseline="central" fill="#90DDF0" font-family="Space Mono,monospace" font-size="8" font-weight="700" letter-spacing="0.05em">T1</text>
+
+                            <circle cx="329" cy="91"  r="18" fill="rgba(7,57,60,0.85)" stroke="rgba(144,221,240,0.35)" stroke-width="1.5"/>
+                            <text x="329" y="91"  text-anchor="middle" dominant-baseline="central" fill="#90DDF0" font-family="Space Mono,monospace" font-size="7" font-weight="700" letter-spacing="0.03em">GEN</text>
+
+                            <circle cx="210" cy="42"  r="18" fill="rgba(7,57,60,0.85)" stroke="rgba(144,221,240,0.35)" stroke-width="1.5"/>
+                            <text x="210" y="42"  text-anchor="middle" dominant-baseline="central" fill="#90DDF0" font-family="Space Mono,monospace" font-size="8" font-weight="700" letter-spacing="0.05em">G2</text>
+
+                            <circle cx="91"  cy="91"  r="18" fill="rgba(7,57,60,0.85)" stroke="rgba(144,221,240,0.35)" stroke-width="1.5"/>
+                            <text x="91"  y="91"  text-anchor="middle" dominant-baseline="central" fill="#90DDF0" font-family="Space Mono,monospace" font-size="7" font-weight="700" letter-spacing="0.03em">FNC</text>
+
+                            <circle cx="42"  cy="210" r="18" fill="rgba(7,57,60,0.85)" stroke="rgba(144,221,240,0.35)" stroke-width="1.5"/>
+                            <text x="42"  y="210" text-anchor="middle" dominant-baseline="central" fill="#90DDF0" font-family="Space Mono,monospace" font-size="8" font-weight="700" letter-spacing="0.05em">C9</text>
+
+                            <circle cx="91"  cy="329" r="18" fill="rgba(7,57,60,0.85)" stroke="rgba(144,221,240,0.35)" stroke-width="1.5"/>
+                            <text x="91"  y="329" text-anchor="middle" dominant-baseline="central" fill="#90DDF0" font-family="Space Mono,monospace" font-size="7" font-weight="700" letter-spacing="0.03em">JDG</text>
+
+                            <circle cx="210" cy="378" r="18" fill="rgba(7,57,60,0.85)" stroke="rgba(144,221,240,0.35)" stroke-width="1.5"/>
+                            <text x="210" y="378" text-anchor="middle" dominant-baseline="central" fill="#90DDF0" font-family="Space Mono,monospace" font-size="7" font-weight="700" letter-spacing="0.03em">HLE</text>
+
+                            <circle cx="329" cy="329" r="18" fill="rgba(7,57,60,0.85)" stroke="rgba(144,221,240,0.35)" stroke-width="1.5"/>
+                            <text x="329" y="329" text-anchor="middle" dominant-baseline="central" fill="#90DDF0" font-family="Space Mono,monospace" font-size="8" font-weight="700" letter-spacing="0.05em">KT</text>
+
+                            <circle cx="310" cy="169" r="11" fill="rgba(44,102,110,0.85)" stroke="rgba(144,221,240,0.55)" stroke-width="1.5"/>
+                            <text x="310" y="169" text-anchor="middle" dominant-baseline="central" fill="rgba(240,237,238,0.7)" font-family="Space Mono,monospace" font-size="6.5">QF</text>
+
+                            <circle cx="169" cy="110" r="11" fill="rgba(44,102,110,0.85)" stroke="rgba(144,221,240,0.55)" stroke-width="1.5"/>
+                            <text x="169" y="110" text-anchor="middle" dominant-baseline="central" fill="rgba(240,237,238,0.7)" font-family="Space Mono,monospace" font-size="6.5">QF</text>
+
+                            <circle cx="110" cy="251" r="11" fill="rgba(44,102,110,0.85)" stroke="rgba(144,221,240,0.55)" stroke-width="1.5"/>
+                            <text x="110" y="251" text-anchor="middle" dominant-baseline="central" fill="rgba(240,237,238,0.7)" font-family="Space Mono,monospace" font-size="6.5">QF</text>
+
+                            <circle cx="251" cy="310" r="11" fill="rgba(44,102,110,0.85)" stroke="rgba(144,221,240,0.55)" stroke-width="1.5"/>
+                            <text x="251" y="310" text-anchor="middle" dominant-baseline="central" fill="rgba(240,237,238,0.7)" font-family="Space Mono,monospace" font-size="6.5">QF</text>
+
+                            <circle cx="232" cy="156" r="9" fill="rgba(44,102,110,0.9)" stroke="#90DDF0" stroke-width="1.5" filter="url(#glow-soft)"/>
+                            <text x="232" y="156" text-anchor="middle" dominant-baseline="central" fill="#90DDF0" font-family="Space Mono,monospace" font-size="6">SF</text>
+
+                            <circle cx="188" cy="264" r="9" fill="rgba(44,102,110,0.9)" stroke="#90DDF0" stroke-width="1.5" filter="url(#glow-soft)"/>
+                            <text x="188" y="264" text-anchor="middle" dominant-baseline="central" fill="#90DDF0" font-family="Space Mono,monospace" font-size="6">SF</text>
+
+                            <circle cx="210" cy="210" r="32" fill="rgba(7,57,60,0.95)" stroke="#90DDF0" stroke-width="2" filter="url(#glow-strong)"/>
+                            <text x="210" y="207" text-anchor="middle" dominant-baseline="central" fill="#90DDF0" font-family="Space Mono,monospace" font-size="8" font-weight="700" letter-spacing="0.08em">FINAL</text>
+                            <text x="210" y="219" text-anchor="middle" dominant-baseline="central" fill="rgba(144,221,240,0.5)" font-family="Space Mono,monospace" font-size="6" letter-spacing="0.06em">2026</text>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+
+        </section>
+
+        <section class="section-features" id="features">
+            <div class="section-header">
+                <div class="section-label">
+                    <span class="label-num">01</span>
+                    <span class="label-text">Возможности</span>
+                </div>
+                <h2 class="section-title">
+                    Твоя площадка<br>
+                    <span class="outline">для турниров</span>
+                </h2>
+            </div>
+
+            <div class="features-grid">
+                <article class="feature-card reveal">
+                    <div class="feature-icon-wrap">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                            <path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <span class="feature-num">01</span>
+                    <h3 class="feature-title">Создай турнир</h3>
+                    <p class="feature-desc">
+                        Запусти свой турнир LoL: выбери формат, призовой фонд,
+                        минимальный ранг и количество участников.
+                    </p>
+                    <a href="tournaments.html" class="feature-link">
+                        Создать
+                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+                            <path d="M3 1L9 6L3 11" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                </article>
+
+                <article class="feature-card reveal">
+                    <div class="feature-icon-wrap">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                            <path d="M12 2 L22 8 L22 16 L12 22 L2 16 L2 8 Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                            <path d="M12 8 L17 12 L12 16 L7 12 Z" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <span class="feature-num">02</span>
+                    <h3 class="feature-title">Каталог турниров</h3>
+                    <p class="feature-desc">
+                        Полный список турниров с датами, призовыми фондами,
+                        регионами и статусом регистрации.
+                    </p>
+                    <a href="tournaments.html" class="feature-link">
+                        Смотреть
+                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+                            <path d="M3 1L9 6L3 11" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                </article>
+
+                <article class="feature-card reveal">
+                    <div class="feature-icon-wrap">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                            <path d="M4 20 L4 12 M10 20 L10 8 M16 20 L16 14 M22 20 L22 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <span class="feature-num">03</span>
+                    <h3 class="feature-title">Рейтинг игроков</h3>
+                    <p class="feature-desc">
+                        Топ игроки сезона 2026: KDA, winrate, рейтинговые очки
+                        по серверам EUW, KR, NA.
+                    </p>
+                    <a href="leaderboard.html" class="feature-link">
+                        Рейтинг
+                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+                            <path d="M3 1L9 6L3 11" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                </article>
+            </div>
+        </section>
+
+        <section class="section-marquee" aria-hidden="true">
+            <div class="marquee-row">
+                <div class="marquee-track">
+                    <span class="marquee-item"><span class="m-gem"></span> LEAGUE OF LEGENDS</span>
+                    <span class="marquee-item outline-text"><span class="m-circle"></span> COMMUNITY TOURNAMENTS</span>
+                    <span class="marquee-item"><span class="m-gem"></span> NEXUS HUB</span>
+                    <span class="marquee-item outline-text"><span class="m-circle"></span> SEASON 2026</span>
+                    <span class="marquee-item"><span class="m-gem"></span> LEAGUE OF LEGENDS</span>
+                    <span class="marquee-item outline-text"><span class="m-circle"></span> COMMUNITY TOURNAMENTS</span>
+                    <span class="marquee-item"><span class="m-gem"></span> NEXUS HUB</span>
+                    <span class="marquee-item outline-text"><span class="m-circle"></span> SEASON 2026</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-tournaments" id="tournaments">
+            <div class="section-header">
+                <div class="section-label">
+                    <span class="label-num">02</span>
+                    <span class="label-text">Активные</span>
+                </div>
+                <h2 class="section-title">Турниры</h2>
+            </div>
+
+            <div class="tournaments-list" id="tournamentsContainer">
+                
+            </div>
+        </section>
+
+        <section class="section-leaders" id="teams">
+            <div class="section-header">
+                <div class="section-label">
+                    <span class="label-num">03</span>
+                    <span class="label-text">Рейтинг</span>
+                </div>
+                <h2 class="section-title">
+                    Топ<br>
+                    <span class="outline">игроки</span>
+                </h2>
+            </div>
+
+            <div class="leaders-layout">
+                <div class="leaders-table" id="teamsContainer">
+                    
+                </div>
+
+                <aside class="leaders-visual">
+                    <div class="leaders-visual-title">Активных игроков</div>
+                    <div class="leaders-visual-num">8K<sup>+</sup></div>
+                    <div class="leaders-visual-desc">
+                        По серверам EUW, KR, NA. Рейтинг обновляется
+                        ежедневно на основе соревновательных данных.
+                    </div>
+                    <div class="leaders-bars" aria-hidden="true">
+                        <span style="--h:40%"></span>
+                        <span style="--h:60%"></span>
+                        <span style="--h:80%"></span>
+                        <span style="--h:55%"></span>
+                        <span style="--h:70%"></span>
+                        <span style="--h:90%"></span>
+                        <span style="--h:45%"></span>
+                        <span style="--h:65%"></span>
+                        <span style="--h:75%"></span>
+                        <span style="--h:50%"></span>
+                        <span style="--h:85%"></span>
+                        <span style="--h:60%"></span>
+                    </div>
+                </aside>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-inner container">
+            <div class="footer-left">© 2026 NEXUS. Курсовой проект БГТУ.</div>
+            <div class="footer-logo logo">
+                <span class="logo-gem" aria-hidden="true"></span>
+                NEXUS
+            </div>
+            <div class="footer-right">
+                <a href="tournaments.html">Турниры</a>
+                <a href="leaderboard.html">Рейтинг</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+</body>
+</html>

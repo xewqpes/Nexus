@@ -1,0 +1,95 @@
+@use '../variables' as *;
+@use '../mixins' as *;
+
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  height: $nav-height;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 $space-lg;
+  border-bottom: 1px solid $line;
+
+  @media (max-width: 640px) {
+    padding: 0 $space-sm;
+  }
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: $space-sm;
+  font-family: $font-display;
+  font-size: 24px;
+  letter-spacing: 0.08em;
+
+  .logo-gem {
+    width: 10px;
+    height: 10px;
+    background: var(--accent-game);
+    transform: rotate(45deg);
+    display: inline-block;
+  }
+}
+
+.nav-center {
+  display: flex;
+  gap: $space-xl;
+
+  a {
+    font-family: $font-mono;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: $ink;
+    padding: $space-xs 0;
+    position: relative;
+    transition: color $dur-fast $ease-out;
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -4px;
+      width: 0;
+      height: 1px;
+      background: var(--accent-game);
+      transition: width $dur-mid $ease-out;
+    }
+
+    &:hover {
+      color: var(--accent-game);
+
+      &::after {
+        width: 100%;
+      }
+    }
+
+    &.active {
+      color: var(--accent-game);
+
+      &::after {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: $space-md;
+
+  .nav-tag {
+    font-family: $font-mono;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: $muted;
+    padding: 6px 10px;
+    border: 1px solid $line;
+    border-radius: $radius-sm;
+  }
+}

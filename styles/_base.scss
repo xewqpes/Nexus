@@ -1,0 +1,127 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: $font-body;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: $ink;
+  background: $bg;
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+}
+
+img, svg {
+  display: block;
+  max-width: 100%;
+}
+
+.grid-overlay {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  background-image:
+    linear-gradient(to right, $line 1px, transparent 1px);
+  background-size: calc(100% / 12) 100%;
+  opacity: 0.5;
+
+  @media (max-width: 900px) {
+    display: none;
+  }
+}
+
+h1, h2, h3, h4 {
+  font-family: $font-display;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 0.02em;
+}
+
+.mono {
+  font-family: $font-mono;
+  letter-spacing: 0.04em;
+}
+
+section {
+  @include fade-in-hidden;
+  pointer-events: none;
+
+  &.fade-in {
+    @include fade-in-visible;
+    pointer-events: auto;
+  }
+}
+
+.container {
+  @include container;
+}
+
+.outline {
+  @include outline-text(1.5px, $ink);
+}
+
+.gold {
+  color: var(--accent-game);
+}
+
+.section-label {
+  display: flex;
+  align-items: center;
+  gap: $space-sm;
+  margin-bottom: $space-lg;
+  font-family: $font-mono;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+
+  .label-num {
+    color: var(--accent-game);
+    font-weight: 700;
+  }
+
+  .label-text {
+    color: $muted;
+  }
+}
+
+.section-header {
+  @include container;
+  margin-bottom: $space-2xl;
+}
+
+.section-title {
+  font-family: $font-display;
+  font-size: clamp(38px, 5vw, 68px);
+  line-height: 0.95;
+  letter-spacing: 0.01em;
+}

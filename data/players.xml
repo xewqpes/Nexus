@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<players>
+  <player id="1">
+    <name>Faker</name>
+    <rank>Challenger</rank>
+    <lp>2847</lp>
+    <winrate>68</winrate>
+    <games>312</games>
+    <mainChampion>Ahri</mainChampion>
+    <role>Mid</role>
+    <server>KR</server>
+    <stats>
+      <kda>8.4</kda>
+      <csPerMin>9.2</csPerMin>
+      <vision>72</vision>
+      <damage>91</damage>
+    </stats>
+    <champions>
+      <champion name="Ahri" games="48" winrate="72"/>
+      <champion name="Orianna" games="41" winrate="68"/>
+      <champion name="LeBlanc" games="35" winrate="74"/>
+      <champion name="Syndra" games="29" winrate="65"/>
+      <champion name="Zed" games="22" winrate="59"/>
+    </champions>
+    <matches>
+      <match champion="Ahri" result="win" kda="12/1/7" cs="284" duration="31:24"/>
+      <match champion="Orianna" result="win" kda="5/2/14" cs="271" duration="38:10"/>
+      <match champion="LeBlanc" result="loss" kda="7/4/3" cs="248" duration="27:55"/>
+      <match champion="Ahri" result="win" kda="9/0/8" cs="302" duration="29:40"/>
+      <match champion="Zed" result="win" kda="14/3/2" cs="261" duration="34:18"/>
+    </matches>
+  </player>
+  <player id="2">
+    <name>Chovy</name>
+    <rank>Challenger</rank>
+    <lp>2541</lp>
+    <winrate>63</winrate>
+    <games>298</games>
+    <mainChampion>Azir</mainChampion>
+    <role>Mid</role>
+    <server>KR</server>
+    <stats>
+      <kda>7.1</kda>
+      <csPerMin>10.4</csPerMin>
+      <vision>65</vision>
+      <damage>88</damage>
+    </stats>
+    <champions>
+      <champion name="Azir" games="52" winrate="65"/>
+      <champion name="Akali" games="38" winrate="61"/>
+      <champion name="Corki" games="31" winrate="67"/>
+      <champion name="Tristana" games="26" winrate="62"/>
+      <champion name="Viktor" games="19" winrate="58"/>
+    </champions>
+    <matches>
+      <match champion="Azir" result="win" kda="8/2/10" cs="318" duration="36:22"/>
+      <match champion="Akali" result="win" kda="11/3/4" cs="256" duration="29:14"/>
+      <match champion="Corki" result="loss" kda="4/5/9" cs="289" duration="41:07"/>
+      <match champion="Azir" result="win" kda="7/1/12" cs="334" duration="33:55"/>
+      <match champion="Viktor" result="win" kda="6/2/8" cs="298" duration="35:40"/>
+    </matches>
+  </player>
+  <player id="3">
+    <name>Zeus</name>
+    <rank>Challenger</rank>
+    <lp>2203</lp>
+    <winrate>61</winrate>
+    <games>276</games>
+    <mainChampion>Jayce</mainChampion>
+    <role>Top</role>
+    <server>KR</server>
+    <stats>
+      <kda>5.8</kda>
+      <csPerMin>9.8</csPerMin>
+      <vision>58</vision>
+      <damage>84</damage>
+    </stats>
+    <champions>
+      <champion name="Jayce" games="44" winrate="63"/>
+      <champion name="Garen" games="38" winrate="60"/>
+      <champion name="Renekton" games="32" winrate="56"/>
+      <champion name="Camille" games="27" winrate="67"/>
+      <champion name="Fiora" games="21" winrate="71"/>
+    </champions>
+    <matches>
+      <match champion="Jayce" result="win" kda="7/2/6" cs="298" duration="33:15"/>
+      <match champion="Camille" result="win" kda="8/1/4" cs="279" duration="28:42"/>
+      <match champion="Renekton" result="loss" kda="3/6/2" cs="245" duration="44:30"/>
+      <match champion="Garen" result="win" kda="6/3/8" cs="261" duration="37:18"/>
+      <match champion="Fiora" result="win" kda="10/1/3" cs="291" duration="30:55"/>
+    </matches>
+  </player>
+  <player id="4">
+    <name>Oner</name>
+    <rank>Challenger</rank>
+    <lp>1987</lp>
+    <winrate>59</winrate>
+    <games>321</games>
+    <mainChampion>Vi</mainChampion>
+    <role>Jungle</role>
+    <server>KR</server>
+    <stats>
+      <kda>6.2</kda>
+      <csPerMin>7.1</csPerMin>
+      <vision>81</vision>
+      <damage>72</damage>
+    </stats>
+    <champions>
+      <champion name="Vi" games="58" winrate="62"/>
+      <champion name="Graves" games="45" winrate="58"/>
+      <champion name="Lee Sin" games="39" winrate="55"/>
+      <champion name="Hecarim" games="28" winrate="64"/>
+      <champion name="Viego" games="20" winrate="60"/>
+    </champions>
+    <matches>
+      <match champion="Vi" result="win" kda="5/3/18" cs="181" duration="32:10"/>
+      <match champion="Graves" result="loss" kda="4/5/8" cs="197" duration="39:45"/>
+      <match champion="Vi" result="win" kda="8/2/14" cs="176" duration="28:30"/>
+      <match champion="Hecarim" result="win" kda="6/1/11" cs="204" duration="26:15"/>
+      <match champion="Lee Sin" result="win" kda="7/4/9" cs="188" duration="35:22"/>
+    </matches>
+  </player>
+  <player id="5">
+    <name>Gumayusi</name>
+    <rank>Challenger</rank>
+    <lp>1843</lp>
+    <winrate>57</winrate>
+    <games>334</games>
+    <mainChampion>Jinx</mainChampion>
+    <role>ADC</role>
+    <server>KR</server>
+    <stats>
+      <kda>5.9</kda>
+      <csPerMin>10.1</csPerMin>
+      <vision>52</vision>
+      <damage>95</damage>
+    </stats>
+    <champions>
+      <champion name="Jinx" games="61" winrate="59"/>
+      <champion name="Caitlyn" games="48" winrate="55"/>
+      <champion name="Jhin" games="37" winrate="62"/>
+      <champion name="Kai'Sa" games="30" winrate="53"/>
+      <champion name="Ezreal" games="24" winrate="54"/>
+    </champions>
+    <matches>
+      <match champion="Jinx" result="win" kda="11/2/7" cs="341" duration="35:20"/>
+      <match champion="Caitlyn" result="win" kda="8/3/9" cs="318" duration="38:44"/>
+      <match champion="Jhin" result="loss" kda="5/4/12" cs="295" duration="42:11"/>
+      <match champion="Jinx" result="win" kda="14/1/5" cs="352" duration="31:35"/>
+      <match champion="Kai'Sa" result="loss" kda="7/5/6" cs="308" duration="40:25"/>
+    </matches>
+  </player>
+  <player id="6">
+    <name>Keria</name>
+    <rank>Challenger</rank>
+    <lp>1721</lp>
+    <winrate>62</winrate>
+    <games>289</games>
+    <mainChampion>Thresh</mainChampion>
+    <role>Support</role>
+    <server>KR</server>
+    <stats>
+      <kda>7.8</kda>
+      <csPerMin>1.4</csPerMin>
+      <vision>95</vision>
+      <damage>41</damage>
+    </stats>
+    <champions>
+      <champion name="Thresh" games="54" winrate="65"/>
+      <champion name="Nautilus" games="42" winrate="63"/>
+      <champion name="Lulu" games="33" winrate="67"/>
+      <champion name="Blitzcrank" games="25" winrate="60"/>
+      <champion name="Rakan" games="19" winrate="68"/>
+    </champions>
+    <matches>
+      <match champion="Thresh" result="win" kda="2/2/21" cs="18" duration="33:10"/>
+      <match champion="Nautilus" result="win" kda="1/3/14" cs="14" duration="29:55"/>
+      <match champion="Lulu" result="loss" kda="3/4/10" cs="22" duration="41:30"/>
+      <match champion="Thresh" result="win" kda="0/1/18" cs="16" duration="27:45"/>
+      <match champion="Rakan" result="win" kda="4/2/16" cs="12" duration="31:20"/>
+    </matches>
+  </player>
+  <player id="7">
+    <name>Canyon</name>
+    <rank>Grandmaster</rank>
+    <lp>987</lp>
+    <winrate>55</winrate>
+    <games>408</games>
+    <mainChampion>Nidalee</mainChampion>
+    <role>Jungle</role>
+    <server>KR</server>
+    <stats>
+      <kda>5.4</kda>
+      <csPerMin>7.8</csPerMin>
+      <vision>76</vision>
+      <damage>68</damage>
+    </stats>
+    <champions>
+      <champion name="Nidalee" games="72" winrate="57"/>
+      <champion name="Kindred" games="55" winrate="54"/>
+      <champion name="Bel'Veth" games="43" winrate="56"/>
+      <champion name="Nocturne" games="31" winrate="52"/>
+      <champion name="Diana" games="24" winrate="58"/>
+    </champions>
+    <matches>
+      <match champion="Nidalee" result="win" kda="6/4/12" cs="211" duration="34:18"/>
+      <match champion="Kindred" result="loss" kda="3/6/8" cs="198" duration="45:22"/>
+      <match champion="Nidalee" result="win" kda="9/2/15" cs="224" duration="29:40"/>
+      <match champion="Bel'Veth" result="win" kda="7/3/11" cs="236" duration="31:55"/>
+      <match champion="Nocturne" result="loss" kda="4/5/7" cs="189" duration="38:10"/>
+    </matches>
+  </player>
+  <player id="8">
+    <name>Caps</name>
+    <rank>Grandmaster</rank>
+    <lp>876</lp>
+    <winrate>54</winrate>
+    <games>387</games>
+    <mainChampion>Syndra</mainChampion>
+    <role>Mid</role>
+    <server>EUW</server>
+    <stats>
+      <kda>5.1</kda>
+      <csPerMin>9.6</csPerMin>
+      <vision>61</vision>
+      <damage>85</damage>
+    </stats>
+    <champions>
+      <champion name="Syndra" games="67" winrate="56"/>
+      <champion name="Azir" games="51" winrate="53"/>
+      <champion name="Cassiopeia" games="38" winrate="55"/>
+      <champion name="Galio" games="29" winrate="52"/>
+      <champion name="Aurelion Sol" games="22" winrate="59"/>
+    </champions>
+    <matches>
+      <match champion="Syndra" result="win" kda="9/3/6" cs="287" duration="36:40"/>
+      <match champion="Azir" result="loss" kda="5/5/7" cs="311" duration="43:15"/>
+      <match champion="Syndra" result="win" kda="7/2/11" cs="274" duration="31:25"/>
+      <match champion="Cassiopeia" result="win" kda="8/4/9" cs="301" duration="38:50"/>
+      <match champion="Galio" result="loss" kda="2/3/14" cs="241" duration="40:35"/>
+    </matches>
+  </player>
+  <player id="9">
+    <name>Blaber</name>
+    <rank>Master</rank>
+    <lp>412</lp>
+    <winrate>53</winrate>
+    <games>445</games>
+    <mainChampion>Xin Zhao</mainChampion>
+    <role>Jungle</role>
+    <server>NA</server>
+    <stats>
+      <kda>4.7</kda>
+      <csPerMin>7.4</csPerMin>
+      <vision>70</vision>
+      <damage>66</damage>
+    </stats>
+    <champions>
+      <champion name="Xin Zhao" games="81" winrate="55"/>
+      <champion name="Olaf" games="62" winrate="52"/>
+      <champion name="Jarvan IV" games="47" winrate="54"/>
+      <champion name="Volibear" games="35" winrate="50"/>
+      <champion name="Trundle" games="28" winrate="57"/>
+    </champions>
+    <matches>
+      <match champion="Xin Zhao" result="win" kda="7/4/13" cs="195" duration="33:45"/>
+      <match champion="Olaf" result="win" kda="5/3/11" cs="204" duration="30:20"/>
+      <match champion="Xin Zhao" result="loss" kda="4/6/8" cs="188" duration="41:15"/>
+      <match champion="Jarvan IV" result="win" kda="6/2/16" cs="211" duration="28:55"/>
+      <match champion="Volibear" result="loss" kda="3/5/10" cs="179" duration="43:40"/>
+    </matches>
+  </player>
+  <player id="10">
+    <name>Hans Sama</name>
+    <rank>Master</rank>
+    <lp>298</lp>
+    <winrate>52</winrate>
+    <games>462</games>
+    <mainChampion>Draven</mainChampion>
+    <role>ADC</role>
+    <server>EUW</server>
+    <stats>
+      <kda>4.5</kda>
+      <csPerMin>9.7</csPerMin>
+      <vision>48</vision>
+      <damage>89</damage>
+    </stats>
+    <champions>
+      <champion name="Draven" games="88" winrate="54"/>
+      <champion name="Kalista" games="63" winrate="51"/>
+      <champion name="Jhin" games="49" winrate="53"/>
+      <champion name="Lucian" games="37" winrate="50"/>
+      <champion name="Jinx" games="28" winrate="56"/>
+    </champions>
+    <matches>
+      <match champion="Draven" result="win" kda="12/3/5" cs="328" duration="34:20"/>
+      <match champion="Kalista" result="loss" kda="6/5/8" cs="294" duration="42:35"/>
+      <match champion="Draven" result="win" kda="9/4/7" cs="341" duration="37:10"/>
+      <match champion="Jhin" result="win" kda="8/2/11" cs="312" duration="33:45"/>
+      <match champion="Lucian" result="loss" kda="5/6/9" cs="285" duration="44:55"/>
+    </matches>
+  </player>
+</players>

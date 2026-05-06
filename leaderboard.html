@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEXUS — Рейтинг игроков</title>
+    <meta name="description" content="Рейтинг лучших игроков League of Legends. Challenger, Grandmaster и Master — топ сезона 2026.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600;700&family=Space+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body data-page="leaderboard" class="dark">
+    <div class="grid-overlay" aria-hidden="true"></div>
+
+    <nav aria-label="Главная навигация">
+        <a href="index.html" class="logo">
+            <span class="logo-gem" aria-hidden="true"></span>
+            NEXUS
+        </a>
+        <ul class="nav-center">
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="tournaments.html">Турниры</a></li>
+            <li><a href="leaderboard.html" class="active">Рейтинг</a></li>
+            <li><a href="player.html">Игроки</a></li>
+        </ul>
+        <div class="nav-right">
+            <span class="nav-tag">Season 2026</span>
+        </div>
+    </nav>
+
+    <main>
+        <section class="lb-hero">
+            <div class="lb-label">Топ игроки</div>
+            <h1>
+                <span class="outline-frost">РЕЙТИНГ</span><br>
+                СЕЗОНА
+            </h1>
+            <p class="lb-sub">
+                Лучшие игроки League of Legends сезона 2026 по лиговым очкам. Challenger, Grandmaster и Master.
+            </p>
+        </section>
+
+        <div class="lb-filters" aria-label="Фильтры по тиру" role="group">
+            <button class="filter-tab active" data-tier="all">Все</button>
+            <button class="filter-tab" data-tier="challenger">Challenger</button>
+            <button class="filter-tab" data-tier="grandmaster">Grandmaster</button>
+            <button class="filter-tab" data-tier="master">Master</button>
+        </div>
+
+        <section class="lb-podium" aria-label="Топ 3 игрока" id="podiumContainer">
+        </section>
+
+        <section class="lb-table-section" aria-label="Полный рейтинг">
+            <div class="lb-table-head" role="row">
+                <span>#</span>
+                <span>Игрок</span>
+                <span>Тир</span>
+                <span>LP</span>
+                <span class="col-wr">WR%</span>
+                <span class="col-games">Игры</span>
+                <span class="col-server">Сервер</span>
+            </div>
+            <div id="leaderboardTable" role="list" aria-label="Таблица рейтинга">
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-inner">
+                <span class="logo">
+                    <span class="logo-gem" aria-hidden="true"></span>
+                    NEXUS
+                </span>
+                <p class="footer-note">© 2026 NEXUS Esports Platform. Курсовой проект.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+</body>
+</html>

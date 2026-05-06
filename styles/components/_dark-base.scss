@@ -1,0 +1,261 @@
+@use '../variables' as *;
+@use '../mixins' as *;
+
+body.dark {
+  background: $onyx;
+  color: $platinum;
+
+  --accent-game: #{$frost};
+  --accent-game-light: #{$stormy-teal};
+
+  .grid-overlay {
+    background-image: linear-gradient(to right, $line-dark 1px, transparent 1px);
+  }
+
+  nav {
+    @include liquid-glass($dark-teal, 0.35, 20px);
+    border-bottom: 1px solid $line-dark;
+
+    .logo {
+      color: $platinum;
+      font-family: $font-display;
+      font-size: 22px;
+      letter-spacing: 0.08em;
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+
+      .logo-gem {
+        background: $frost;
+      }
+    }
+
+    .nav-center a {
+      @include mono(11px, 0.12em);
+      color: $muted-dark;
+      text-transform: uppercase;
+      transition: color 0.2s;
+
+      &::after { background: $frost; }
+      &:hover  { color: $platinum; }
+      &.active {
+        color: $frost;
+        &::after { width: 100%; }
+      }
+    }
+
+    .nav-right .nav-tag {
+      border-color: $line-dark;
+      color: $muted-dark;
+    }
+
+  }
+
+  .hero::before {
+    background: radial-gradient(circle, rgba(144, 221, 240, 0.08), transparent 70%);
+  }
+
+  .hero-headline {
+    color: $platinum;
+
+    .outline {
+      -webkit-text-stroke: 2px $platinum;
+      color: transparent;
+    }
+  }
+
+  .hero-body { color: $muted-dark; }
+
+  .hero-metrics {
+    border-top-color: $line-dark;
+
+    .metric-num {
+      color: $platinum;
+      sup { color: $frost; }
+    }
+    .metric-label { color: $muted-dark; }
+  }
+
+  .season-tag {
+    color: $muted-dark;
+    .season-bar { background: $frost; }
+  }
+
+  .bracket-wrap {
+    width: 100%;
+    max-width: 420px;
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: bracket-rotate 120s linear infinite;
+  }
+
+  .bracket-svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  @keyframes bracket-rotate {
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(360deg); }
+  }
+
+  .section-label {
+    .label-num  { color: $frost; }
+    .label-text { color: $muted-dark; }
+  }
+
+  .section-title {
+    color: $platinum;
+    .outline {
+      -webkit-text-stroke: 2px $platinum;
+      color: transparent;
+    }
+  }
+
+  .section-features { background: transparent; }
+
+  .feature-card {
+    background: rgba($dark-teal, 0.25);
+    border-color: $line-dark;
+    color: $platinum;
+
+    .feature-num   { color: rgba($frost, 0.25); }
+    .feature-title { color: $platinum; }
+    .feature-desc  { color: $muted-dark; }
+
+    .feature-icon-wrap {
+      color: $frost;
+      background: rgba($frost, 0.08);
+      border-color: $line-dark;
+    }
+
+    .feature-link {
+      color: $frost;
+      &:hover { color: $platinum; }
+    }
+
+    &:hover {
+      border-color: rgba($frost, 0.3);
+      box-shadow: 0 20px 60px -20px rgba($frost, 0.08);
+    }
+  }
+
+  .section-marquee {
+    border-color: $line-dark;
+  }
+
+  .marquee-item {
+    color: $platinum;
+    &.outline-text {
+      -webkit-text-stroke: 1.5px rgba($platinum, 0.35);
+      color: transparent;
+    }
+    .m-gem    { background: $frost; }
+    .m-circle { border-color: $frost; }
+  }
+
+  .section-tournaments { background: transparent; }
+
+  .tournament-card {
+    background: rgba($dark-teal, 0.25);
+    border-color: $line-dark;
+    color: $platinum;
+
+    &:hover {
+      border-color: rgba($frost, 0.35);
+      box-shadow: 0 0 30px rgba($frost, 0.06);
+    }
+
+    .t-game  { color: $frost; border-color: $line-dark; }
+    .t-name  { color: $platinum; }
+
+    .t-meta-row {
+      border-color: $line-dark;
+      span:first-child { color: $muted-dark; }
+    }
+
+    .t-prize {
+      border-color: $line-dark;
+      span   { color: $muted-dark; }
+      strong { color: $frost; }
+    }
+  }
+
+  .section-leaders { background: transparent; }
+
+  .leaders-visual {
+    @include liquid-glass($dark-teal, 0.35, 20px);
+    border-color: $line-dark;
+  }
+
+  .leaders-visual-title { color: $muted-dark; }
+  .leaders-visual-num   { color: $frost; }
+  .leaders-visual-desc  { color: $muted-dark; }
+  .leaders-bars span    { background: $stormy-teal; height: var(--h, 50%); }
+
+  footer {
+    background: $dark-teal;
+    color: $platinum;
+    border-top: 1px solid $line-dark;
+    padding: $space-lg 0;
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: $space-md;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      font-size: 20px;
+      .logo-hex { width: 10px; height: 10px; }
+    }
+  }
+}
+
+body.dark section {
+  background: transparent;
+}
+
+body.dark {
+  .btn-primary {
+    background: $frost;
+    color: $onyx;
+    border: none;
+
+    &:hover {
+      background: $stormy-teal;
+      color: $platinum;
+    }
+  }
+
+  .btn-ghost {
+    background: transparent;
+    color: $platinum;
+    border-color: $line-dark;
+
+    &:hover {
+      background: rgba($frost, 0.08);
+      border-color: rgba($frost, 0.4);
+      color: $frost;
+    }
+  }
+
+  .feature-link {
+    color: $frost;
+    border-bottom-color: rgba($frost, 0.35);
+
+    &:hover {
+      color: $platinum;
+      border-bottom-color: $platinum;
+    }
+  }
+
+  .hero-headline .gold {
+    color: $frost;
+  }
+
+}
