@@ -1,7 +1,7 @@
 @use '../variables' as *;
 @use '../mixins' as *;
 
-body.dark {
+body {
   background: $onyx;
   color: $platinum;
 
@@ -216,46 +216,43 @@ body.dark {
   }
 }
 
-body.dark section {
+section {
   background: transparent;
 }
 
-body.dark {
-  .btn-primary {
-    background: $frost;
-    color: $onyx;
-    border: none;
+.btn-primary {
+  background: $frost;
+  color: $onyx;
+  border: none;
 
-    &:hover {
-      background: $stormy-teal;
-      color: $platinum;
-    }
-  }
-
-  .btn-ghost {
-    background: transparent;
+  &:hover {
+    background: $stormy-teal;
     color: $platinum;
-    border-color: $line-dark;
-
-    &:hover {
-      background: rgba($frost, 0.08);
-      border-color: rgba($frost, 0.4);
-      color: $frost;
-    }
   }
+}
 
-  .feature-link {
-    color: $frost;
-    border-bottom-color: rgba($frost, 0.35);
+.btn-ghost {
+  background: transparent;
+  color: $platinum;
+  border-color: $line-dark;
 
-    &:hover {
-      color: $platinum;
-      border-bottom-color: $platinum;
-    }
-  }
-
-  .hero-headline .gold {
+  &:hover {
+    background: rgba($frost, 0.08);
+    border-color: rgba($frost, 0.4);
     color: $frost;
   }
+}
 
+.feature-link {
+  color: $frost;
+  border-bottom-color: rgba($frost, 0.35);
+
+  &:hover {
+    color: $platinum;
+    border-bottom-color: $platinum;
+  }
+}
+
+.hero-headline .gold {
+  color: $frost;
 }

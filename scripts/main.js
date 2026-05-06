@@ -703,9 +703,7 @@ function init() {
         loadData();
     }
 
-    if (document.body.classList.contains('dark')) {
-        setTimeout(initRevealObserver, 200);
-    }
+    setTimeout(initRevealObserver, 200);
 }
 
 if (document.readyState === 'loading') {
