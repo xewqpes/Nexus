@@ -2357,15 +2357,14 @@ section {
 }
 
 .lb-hero {
-  padding: 7rem 0 4rem;
   width: 100%;
   max-width: 1440px;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 7rem 2rem 4rem;
 }
 @media (max-width: 640px) {
   .lb-hero {
-    padding: 0 1rem;
+    padding: 7rem 1rem 4rem;
   }
 }
 .lb-hero .lb-label {
@@ -3090,15 +3089,14 @@ section {
 }
 
 .news-hero {
-  padding: 7rem 0 4rem;
   width: 100%;
   max-width: 1440px;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 7rem 2rem 4rem;
 }
 @media (max-width: 640px) {
   .news-hero {
-    padding: 0 1rem;
+    padding: 7rem 1rem 4rem;
   }
 }
 .news-hero .news-label {
