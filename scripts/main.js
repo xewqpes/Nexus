@@ -158,7 +158,7 @@ function initPage() {
 }
 
 function escapeHtml(str) {
-    if (str == null) return '';
+    if (str === null || str === undefined) return '';
     return String(str)
         .replace(/&/g, '&amp;')
         .replace(/</g, '&lt;')

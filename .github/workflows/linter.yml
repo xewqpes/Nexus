@@ -42,6 +42,6 @@ jobs:
           VALIDATE_NATURAL_LANGUAGE: false
           VALIDATE_SCSS: false
 
-          JAVASCRIPT_ES_CONFIG_FILE: .eslintrc.json
+          JAVASCRIPT_ES_CONFIG_FILE: eslint.config.mjs
           CSS_FILE_NAME: .stylelintrc.json
           HTML_FILE_NAME: .htmlhintrc
